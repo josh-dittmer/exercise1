@@ -1,20 +1,20 @@
 package exercise1;
 
 public class Candidate {
-	private final int candidateId;
+	private final int id;
 	private String firstName;
 	private String lastName;
-	private String party;
+	private int numVotes;
 	
-	public Candidate(int candidateId, String firstName, String lastName, String party) {
-		this.candidateId = candidateId;
+	public Candidate(int id, String firstName, String lastName) {
+		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.party = party;
+		this.numVotes = 0;
 	}
 	
 	public int getId() {
-		return this.candidateId;
+		return this.id;
 	}
 	
 	public void setName(String firstName, String lastName) {
@@ -27,19 +27,15 @@ public class Candidate {
 		return name.toUpperCase();
 	}
 	
-	public String getParty() {
-		return this.party;
+	public void addVote() {
+		this.numVotes++;
+	}
+	
+	public int getVotes() {
+		return this.numVotes;
 	}
 	
 	public void printInfo() {
 		Utility.printCandidateInfo(this);
-	}
-	
-	public static void main(String[] args) {
-		Candidate test1 = new Candidate(1234, "Test", "Guy", "Test");
-		Voter test2 = new Voter(4321, "Hello", "World", false);
-		
-		test1.printInfo();
-		test2.printInfo();
 	}
 }
