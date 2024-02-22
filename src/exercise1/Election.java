@@ -2,7 +2,7 @@ package exercise1;
 
 import java.util.ArrayList;
 
-public class Election {
+public abstract class Election {
 	private ArrayList<Voter> voters = new ArrayList<>();
 	
 	private boolean finished;
@@ -35,6 +35,8 @@ public class Election {
 	public boolean isFinished() {
 		return this.finished;
 	}
+	
+	public abstract void displayResults();
 	
 	public static void main(String[] args) {
 		PresidentialElection election = new PresidentialElection();

@@ -18,6 +18,7 @@ public class CongressionalElection extends Election {
 		this.senateCandidates.add(senateCandidate);
 	}
 	
+	@Override
 	public void displayResults() {
 		if (!super.isFinished()) {
 			System.out.println("The election is still in progress!");

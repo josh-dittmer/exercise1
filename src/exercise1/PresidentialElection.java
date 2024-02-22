@@ -13,6 +13,7 @@ public class PresidentialElection extends Election {
 		this.candidates.add(candidate);
 	}
 	
+	@Override
 	public void displayResults() {
 		if (!super.isFinished()) {
 			System.out.println("The election is still in progress!");

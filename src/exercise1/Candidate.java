@@ -1,6 +1,6 @@
 package exercise1;
 
-public class Candidate {
+public abstract class Candidate {
 	private final int id;
 	private String firstName;
 	private String lastName;
